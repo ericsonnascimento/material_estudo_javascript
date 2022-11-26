@@ -1,20 +1,4 @@
-<!doctype html>
-<html lang="pt-BR">
-<head>
-	<meta charset="utf-8">
-	<title>Incorporando Javascript em Páginas HTML</title>
-	<!-- Incorporando um arquivo .js externo -->
-	<script src="script.js"></script>
-</head>
-<body>
-	<div id="exibe_resultado"> Resultado da Multiplicação:  </div>
-</body>
-	<!-- Incorporando códigos Javascript diretamente na página -->
-	<script type="text/javascript">
-		//Com duas barras criamos um comentário de linha em Javascript
-		//Comentários de mais de uma linha podem ser feitos dentro de /* */
-      
-		var variavel;  //Declarando uma variável cujo nome é 'variavel'
+var variavel;  //Declarando uma variável cujo nome é 'variavel'
       
 		variavel = 3 + 3; // Atribuindo valores e aplicando uma operação matemática em uma variável
      
@@ -46,7 +30,5 @@
       
 			//Retornando (devolvendo) o valor da variável resultado
 			return resultado;
-     
-		}
-	</script>
-</html>
+        
+        }
