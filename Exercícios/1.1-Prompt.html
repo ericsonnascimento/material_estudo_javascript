@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+var numero1 = prompt('Digite o primeiro númerio: ');
+var numero2 = prompt('Digite o segundo número: ');
+var calcular = prompt('Qual operação deseja realizar? (Digite + ou - ou / ou *)');
+
+var resultado = 0;
+
+if (calcular == '+')
+    resultado = soma(numero1, numero2);
+
+if (calcular == '-')
+    resultado = subtrair(numero1, numero2);
+
+if (calcular == '/')
+    resultado = dividir(numero1, numero2);
+
+if (calcular == '*')
+    resultado = multiplicar(numero1, numero2);
+
+alert ('O resultado da operação é igual a: ' + resultado);
+
+function soma(numero1, numero2){
+    return parseInt(numero1) + parseInt(numero2);
+}
+
+function subtrair(numero1, numero2){
+    return parseInt(numero1) - parseInt(numero2);
+}
+
+function dividir(numero1, numero2){
+    return parseInt(numero1) / parseInt(numero2);
+}
+
+function multiplicar(numero1, numero2){
+    return parseInt(numero1) * parseInt(numero2)
+}
+
+</script>
+</html>
