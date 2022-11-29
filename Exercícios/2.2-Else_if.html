@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Else if</title>
+</head>
+<body>
+    
+</body>
+<script text="text/javascript">
+
+    var time = new Date().getHours();
+    
+    if (time < 12){
+        saldacao = 'Bom dia!'
+
+    }else if (time < 18){
+        saldacao = 'Boa tarde!'
+
+    }else{
+        saldacao = 'Boa noite!'
+    }
+
+    console.log('Olá tenha ' + saldacao);
+
+    //
+
+    teste = (time < 12) ? 'Bom dia!':
+            (time < 18) ? 'Boa tarde!':
+                          'Boa noite!'
+    console.log(teste)
+
+
+</script>
+
+</html>

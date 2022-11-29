@@ -12,21 +12,21 @@
 
 <script>
 
-var numero1 = prompt('Digite o primeiro número: ');
-var numero2 = prompt('Digite o segundo número: ');
-var calcular = prompt('Qual operação deseja realizar? (Digite + ou - ou / ou *)');
+    var numero1 = prompt('Digite o primeiro número: ');
+    var numero2 = prompt('Digite o segundo número: ');
+    var calcular = prompt('Qual operação deseja realizar? (Digite + ou - ou / ou *)');
 
-var resultadoOperacao = realizaOperacao(numero1, numero2, calcular);
+    var resultadoOperacao = realizaOperacao(numero1, numero2, calcular);
 
-alert('O resultado da operação é igual a:' + resultadoOperacao);
+    alert('O resultado da operação é igual a:' + resultadoOperacao);
 
-function realizaOperacao(numero1, numero2, op){
-    var resultado = 0;
+    function realizaOperacao(numero1, numero2, op){
+        var resultado = 0;
 
-    //resultado = numero1 + eval(op) + numero2
-    resultado = eval(numero1 + op + numero2);
+        //resultado = numero1 + eval(op) + numero2
+        resultado = eval(numero1 + op + numero2);
 
-    return resultado;
+        return resultado;
 }
 
 
