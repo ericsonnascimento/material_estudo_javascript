@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício JS</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+
+    let numeros = [];
+
+    numeros[0] = solicitarPrimeiroNumero();
+    numeros[1] = solicitarSegundoNumero();
+
+    let resultadoDivisao = divisao(numeros);
+    
+    alert('O resultado da divisão é: ' + resultadoDivisao)
+    
+    function solicitarPrimeiroNumero(){
+        let numero1 = prompt('Insira o PRIMEIRO número: ');
+        
+        if(numero1 < 0){
+            alert('O número precisa ser inteiro!');
+            return solicitarPrimeiroNumero();
+        }else{
+            return numero1;
+        }
+    }
+
+    function solicitarSegundoNumero(){
+        let numero2 = prompt('Insira SEGUNDO número: ');
+        
+        if(numero2 < 0){
+            alert('O número precisa ser inteiro!');
+            return solicitarSegundoNumero();
+        }else{
+            return numero2;
+        }
+    }
+
+    function divisao(numeros){
+        var resultado = 0;
+        
+        resultado = numeros[0] / numeros[1];
+        return resultado;
+    }
+
+
+    
+
+    
+
+</script>
+</html>

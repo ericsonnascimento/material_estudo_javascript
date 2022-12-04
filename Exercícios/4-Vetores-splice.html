@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetores Splice</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+
+    // Exemplo sem Splice, o código substituiu 12 por 50
+    let valores = [12, 37, 85];
+    valores[0] = 50;
+    console.log(valores);
+
+    // Exemplo com Slice acrescentando elementos no array sem remover nenhum elemento logo após o indice 2
+    const fruits = ['banana', 'orange', 'apple', 'mango'];
+    fruits.splice(2, 0, 'lemon', 'kiwi');
+    console.log(fruits);
+
+    // Exemplo com Slice acrescentando elementos no array removendo 2 elementos logo após o indice 2
+    const fruitss = ['banana', 'orange', 'apple', 'mango'];
+    fruitss.splice(2, 2, 'lemon', 'kiwi');
+    console.log(fruitss);
+
+</script>
+</html>
