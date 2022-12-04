@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos Json</title>
+</head>
+<body>
+    
+</body>
+    <script type="text/javascript">
+
+        //Passando dados Jason para uma API
+        function alterar(){
+            let pessoas = [{"nome": "Ericson", "idade": 41},
+                           {"nome": "Fabiana", "idade": 41}];
+
+            let objeto = document.getElementById('c1');
+            let texto = "";
+            for (const x of pessoas){
+                console.log(x);
+                texto +=
+                `${x["nome"]} tem ${x ["idade"]} anos(s) <br/>`;
+            }
+            objeto.innerHTML = texto;
+        }
+    </script>
+
+<script type="text/javascript">
+
+    //Passando dados Jason para uma API utilizando CLASSE JavaScript
+    function Pessoa(nome, idade){
+        this.nome = nome;
+        this.idade = idade;
+    }
+    function alterar(){
+        let pessoas = [new Pessoa("Ericson", 41),
+                       new Pessoa("Fabiana", 41)];
+
+        let objeto = document.getElementById('c1');
+        let texto = "";
+        for (const x of pessoas){
+            console.log(x);
+            texto +=
+            `${x["nome"]} tem ${x ["idade"]} anos(s) <br/>`;
+        }
+        objeto.innerHTML = texto;
+    }
+</script>
+</html>
