@@ -96,3 +96,14 @@ function multiNumero(numero) {
 let resultado = multiNumero(5);
 console.log(`A multiplicação do número é ${resultado}`);
 */
+
+/*
+//Crie uma função que calcule o índice de massa corporal (IMC) de uma pessoa, a partir de sua altura, em metros, e peso, em quilogramas,
+// que serão recebidos como parâmetro.
+
+function calculoIMC(altura, peso) {
+    let imc = (altura * altura) / peso;
+    return imc
+}
+*/
+

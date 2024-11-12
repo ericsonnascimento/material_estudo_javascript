@@ -1,28 +1,64 @@
 let numeroSecreto = gerarNumeroAleatorio();
+let tentativas = 1;
 
+//Função para a TAG e o Parágrafo, utilizando os princípios DRY (Dont Reapeat Youself)
 function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
 }
 
-exibirTextoNaTela('h1', 'Jogo do número secreto');
-exibirTextoNaTela('p', 'Escolha um número de 1 a 10');
+//Função para centralizar a inserção de dados em um único local, já que iremos inserir dados em vários locais
+function exibirMensagemInicial() {
+    exibirTextoNaTela('h1', 'Jogo do número secreto');
+    exibirTextoNaTela('p', 'Escolha um número de 1 a 10'); 
+}
 
+//Temos que chamar a função para que ela seja exibida na tela
+exibirMensagemInicial();
+
+//Função relacionada ao button "Chutar"
 function verificarChute() {
     let chute = document.querySelector('input').value;
     
     if (chute == numeroSecreto) {
         exibirTextoNaTela('h1', 'Você Acertou!');
-        exibirTextoNaTela('p', 'Você descobriu o número secreto');
+
+        //Utilizando operador ternário, se a tentativa for maior que um usar no plural se não no singular
+        let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
+
+        let mensagemTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativa}!`;
+        exibirTextoNaTela('p', mensagemTentativas);
+
+        //Pegando o button "Novo Jogo" atravé do ID, habilitando o botão ao acertar o número secreto removendo o "atributo disabled"
+        document.getElementById('reiniciar').removeAttribute('disabled');
+
     } else {
         if (chute > numeroSecreto) {
             exibirTextoNaTela('p', 'O número secreto é MENOR');
         } else {
             exibirTextoNaTela('p', 'O numero secreto é MAIOR');
         }
+        tentativas++;
+        limparCampo();
     }
 }
 
+//Função para gerar números aleatório de 1 a 10 mudando de float para inteiro
 function gerarNumeroAleatorio() {
     return parseInt(Math.random() * 10 + 1);
+}
+
+//Função de limpeza do campo após tentativa, utilizando a string vazia ''
+function limparCampo() {
+    chute = document.querySelector('input');
+    chute.value = '';
+}
+
+//Função relacionada ao button "Novo jogo"
+function reiniciarJogo() {
+    numeroSecreto = gerarNumeroAleatorio();
+    limparCampo();
+    tentativas = 1;
+    exibirMensagemInicial();
+    document.getElementById('reiniciar').setAttribute('disabled', true);
 }
