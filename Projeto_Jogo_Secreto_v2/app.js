@@ -1,3 +1,6 @@
+
+let listaDeNumerosSorteados = [];
+let numeroLimite = 10;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
@@ -43,9 +46,21 @@ function verificarChute() {
     }
 }
 
-//Função para gerar números aleatório de 1 a 10 mudando de float para inteiro
+//Função para gerar números aleatório de 1 a 10 mudando de float para inteiro que salva os números em uma lista para que não se repitam
 function gerarNumeroAleatorio() {
-    return parseInt(Math.random() * 10 + 1);
+    let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
+    let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
+
+    if (quantidadeDeElementosNaLista == numeroLimite) {
+        listaDeNumerosSorteados = [];
+    }
+    if (listaDeNumerosSorteados.includes(numeroEscolhido)) {
+        return gerarNumeroAleatorio();
+    } else {
+        listaDeNumerosSorteados.push(numeroEscolhido);
+        console.log(listaDeNumerosSorteados);
+        return numeroEscolhido;
+    }
 }
 
 //Função de limpeza do campo após tentativa, utilizando a string vazia ''

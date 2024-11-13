@@ -97,8 +97,8 @@ let resultado = multiNumero(5);
 console.log(`A multiplicação do número é ${resultado}`);
 */
 
-/*
-//Crie uma função que calcule o índice de massa corporal (IMC) de uma pessoa, a partir de sua altura, em metros, e peso, em quilogramas,
+/*---------------------------
+//11 - Crie uma função que calcule o índice de massa corporal (IMC) de uma pessoa, a partir de sua altura, em metros, e peso, em quilogramas,
 // que serão recebidos como parâmetro.
 
 function calculoIMC(altura, peso) {
@@ -107,3 +107,46 @@ function calculoIMC(altura, peso) {
 }
 */
 
+/*-----------------------------
+//12 - Crie uma função que converte um valor em dólar, passado como parâmetro, e retorna o valor equivalente em reais. Para isso,
+//considere a cotação do dólar igual a R$4,80.
+
+function converterDolarEmReal(valorDolar) {
+    let dolarDia = 4.80;
+    let cauculo = valorDolar * dolarDia;
+    return cauculo;
+}
+*/
+
+/*-------------------------
+//13 - Crie uma função que mostre na tela a área e o perímetro de uma sala retangular, 
+//utilizando altura e largura que serão dadas como parâmetro.
+
+function areaPerimetroQuadrado(largura, altura) {
+    area = largura * altura;
+    perimetro = (altura + largura) * 2;
+    console.log(`A área da sala é de ${area}m² e o perímetro é de ${perimetro}m`);
+}
+*/
+
+/*----------------------
+//14 - Crie uma função que mostre na tela a área e o perímetro de uma sala circular, 
+//utilizando seu raio que será fornecido como parâmetro. Considere Pi = 3,14.
+
+function areaPerimetroCirculo(raio) {
+    area = (raio ** 2) * Math.PI;
+    perimetro = 2 * Math.PI * raio;
+    console.log(`A área do circulo é de ${area.toFixed(2)}m² e o perímetro é de ${perimetro.toFixed(2)}m`); 
+}
+*/
+
+/*
+//15 - Crie uma função que mostre na tela a tabuada de um número dado como parâmetro.
+
+function mostrarTabuada(numero) {
+    for (let i = 1; i <= 10; i++) {
+      let resultado = numero * i;
+      console.log(`${numero} x ${i} = ${resultado}`);
+    }
+}
+*/
