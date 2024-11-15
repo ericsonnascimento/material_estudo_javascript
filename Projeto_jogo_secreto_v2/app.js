@@ -8,6 +8,10 @@ let tentativas = 1;
 function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
+
+    //Extensão que trás voz ao ambiente do usuário lendo tudo que estiver inserido na variável texto
+    //https://responsivevoice.org/
+    responsiveVoice.speak(texto, 'Brazilian Portuguese Female', {rate:1.2} );
 }
 
 //Função para centralizar a inserção de dados em um único local, já que iremos inserir dados em vários locais

@@ -1,8 +1,9 @@
-let titulo = document.querySelector('h1');
+/*let titulo = document.querySelector('h1');
 titulo.innerHTML = 'Jogo do número secreto';
 
 let paragrafo = document.querySelector('p');
 paragrafo.innerHTML = 'Escolha um número de 1 a 10'
+*/
 
 /* ------------------
 //1 - Crie uma função que exiba no console a mensagem O botão foi clicado sempre que o botão Console for pressionado.
@@ -149,4 +150,19 @@ function mostrarTabuada(numero) {
       console.log(`${numero} x ${i} = ${resultado}`);
     }
 }
+*/
+
+/*
+//16 - Crie uma lista de linguagens de programação chamada linguagensDeProgramacao com os seguintes elementos: 
+//'JavaScript','C','C++', 'Kotlin' e 'Python'.
+//Adicione à lista linguagensDeProgramacao os seguintes elementos: 'Java', 'Ruby' e 'GoLang'.
+//Crie uma lista com 3 nomes e exiba no console apenas o primeiro elemento.
+//Crie uma lista com 3 nomes e exiba no console apenas o segundo elemento.
+//Crie uma lista com 3 nomes e exiba no console apenas o último elemento.
+
+let linguagensDeProgramacao = ['JavaScript','C','C++', 'Kotlin', 'Python']
+linguagensDeProgramacao.push('Java', 'Ruby', 'GoLang')
+
+console.log(linguagensDeProgramacao[0])
+console.log(linguagensDeProgramacao[linguagensDeProgramacao.length - 1])
 */
