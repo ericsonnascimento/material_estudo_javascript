@@ -3,9 +3,24 @@ limpar();
 
 function adicionar() {
     let produto = document.getElementById('produto').value;
-    let nomeProduto = produto.split('-')[0];
-    let valorProduto = produto.split('R$')[1];
     let quantidade = document.getElementById('quantidade').value;
+
+    // Verificar se o produto selecionado é válido
+    if (!produto || produto.trim() === "") {
+        alert("Selecione um produto válido.");
+        return;
+    }
+
+
+    // Verificar se a quantidade inserida é válida
+    if (isNaN(quantidade) || quantidade <= 0) {
+        alert("Insira uma quantidade válida.");
+        return;
+    }
+
+    let nomeProduto = produto.split('-')[0];
+    let valorProduto = parseFloat(produto.split('R$')[1]);
+    
     let preco = valorProduto * quantidade;
     
    
